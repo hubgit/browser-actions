@@ -5,14 +5,25 @@
 
 <body>
 
-<h1>Browser Actions</h1>
+<h1 class="title">Browser Actions</h1>
+<div class="subtitle">(a.k.a. bookmarklets)</div>
 
-<div>(a.k.a. bookmarklets)</div>
+<h2 id="archiving">Archiving</h2>
 
 <ul>
-  <li><a href="javascript:location.href='https://web.archive.org/save/'+location.href">Archive Now</a></li>
-  <li><a href="javascript:location.href=location.href.replace(/web\/\d+/, 'save', location.href)">Archive Again</a></li>
-  <li><a href="javascript:location.href='https://via.hypothes.is/'+location.href">Annotate with hypothes.is</a></li>
-  <li><a href="javascript:location.href='https://genius.it/'+location.href">Annotate with Genius</a></li>
+  <li><a href="javascript:location.href='https://web.archive.org/save/'+location.href">Archive Now</a> &middot; Archive the current page in the Internet Archive's Wayback Machine</li>
+  <li><a href="javascript:location.href=location.href.replace(/web\/\d+/, 'save', location.href)">Archive Again</a> &middot; Add a fresh snapshot of an archive being viewed in the Internet Archive's Wayback Machine</li>
+</ul>
+
+<h2 id="annotation">Annotation</h2>
+
+<ul>
+  <li><a href="javascript:location.href='https://via.hypothes.is/'+location.href">Annotate with hypothes.is</a> &middot; Annotate the current page with <a href="http://hypothes.is/">hypothes.is</a></li>
+  <li><a href="javascript:location.href='https://genius.it/'+location.href">Annotate with Genius</a> &middot; Annotate the current page with <a href="http://genius.com/">Genius</a></li>
+</ul>
+
+<h2 id="misc">Misc</h2>
+
+<ul>
   <li><a href="javascript:var nodes=document.querySelectorAll('input[type=password]');if(nodes.length){var values=Array.prototype.map.call(nodes,function(node){return node.value;});alert('Passwords in forms on this page:\n\n'+values.join('\n'));}else{alert('There are no passwords in forms on this page.');}">View Passwords</a></li>
 </ul>
