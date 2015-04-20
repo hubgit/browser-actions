@@ -11,20 +11,50 @@
 <h2 id="archiving">Archiving</h2>
 
 <ul>
-  <li><a href="javascript:location.href='https://web.archive.org/save/'+location.href">Archive Now</a> &middot; Archive the current page in the Internet Archive's Wayback Machine</li>
-  <li><a href="javascript:location.href=location.href.replace(/web\/\d+/, 'save', location.href)">Archive Again</a> &middot; Add a fresh snapshot of an archive being viewed in the Internet Archive's Wayback Machine</li>
-  <li><a href="javascript:location.href='https://web.archive.org/web/1/'+location.href">View Archive</a> &middot; View the earliest snapshot of the current page in the Internet Archive's Wayback Machine</li>
+<li>
+<p><a>Archive Now</a> &middot; Archive the current page in the Internet Archive's Wayback Machine</p>
+<pre><code>location.href = 'https://web.archive.org/save/' + location.href</code></pre>
+</li>
+<li>
+<p><a>Archive Again</a> &middot; Add a fresh snapshot of an archive being viewed in the Internet Archive's Wayback Machine</p>
+<pre><code>location.href = location.href.replace(/web\/\d+/, 'save', location.href)</code></pre>
+</li>
+<li>
+<p><a>View Archive</a> &middot; View the earliest snapshot of the current page in the Internet Archive's Wayback Machine</p>
+<pre><code>location.href = 'https://web.archive.org/web/1/' + location.href</code></pre>
+</li>
 </ul>
 
 <h2 id="annotation">Annotation</h2>
 
 <ul>
-  <li><a href="javascript:location.href='https://via.hypothes.is/'+location.href">Annotate with hypothes.is</a> &middot; Annotate the current page with <a href="http://hypothes.is/">hypothes.is</a></li>
-  <li><a href="javascript:location.href='https://genius.it/'+location.href">Annotate with Genius</a> &middot; Annotate the current page with <a href="http://genius.com/">Genius</a></li>
+<li>
+<p><a>Annotate with hypothes.is</a> &middot; Annotate the current page with <a href="http://hypothes.is/">hypothes.is</a></p>
+<pre><code>location.href = 'https://via.hypothes.is/' + location.href</code></pre>
+</li>
+<li>
+<p><a>Annotate with Genius</a> &middot; Annotate the current page with <a href="http://genius.com/">Genius</a></p>
+<pre><code>location.href = 'https://genius.it/' + location.href</code></pre>
+</li>
 </ul>
 
 <h2 id="misc">Misc</h2>
 
 <ul>
-  <li><a href="javascript:var nodes=document.querySelectorAll('input[type=password]');if(nodes.length){var values=Array.prototype.map.call(nodes,function(node){return node.value;});alert('Passwords in forms on this page:\n\n'+values.join('\n'));}else{alert('There are no passwords in forms on this page.');}">View Passwords</a> &middot; Show the content of password inputs on the current page</li>
+<li>
+<p><a>View Passwords</a> &middot; Show the content of password inputs on the current page</p>
+<pre><code>var nodes = document.querySelectorAll('input[type=password]');
+
+if (nodes.length){
+    var values = Array.prototype.map.call(nodes, function(node) {
+        return node.value;
+    });
+
+    alert('Passwords in forms on this page:\n\n' + values.join('\n'));
+} else {
+    alert('There are no passwords in forms on this page.');
+}</code></pre>
+</li>
 </ul>
+
+<script src="actions.js"></script>
