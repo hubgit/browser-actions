@@ -70,17 +70,19 @@
 </li>
 <li>
 <p><a>View Passwords</a> &middot; Show the content of password inputs on the current page</p>
-<pre><code>var nodes = document.querySelectorAll('input[type=password]');
-
-if (nodes.length){
-    var values = Array.prototype.map.call(nodes, function(node) {
-        return node.value;
-    });
-
-    alert('Passwords in forms on this page:\n\n' + values.join('\n'));
-} else {
-    alert('There are no passwords in forms on this page.');
-}</code></pre>
+<pre><code>(function() {
+  var nodes = document.querySelectorAll('input[type=password]');
+  
+  if (nodes.length){
+      var values = Array.prototype.map.call(nodes, function(node) {
+          return node.value;
+      });
+  
+      alert('Passwords in forms on this page:\n\n' + values.join('\n'));
+  } else {
+      alert('There are no passwords in forms on this page.');
+  }
+})();</code></pre>
 </li>
 </ul>
 
