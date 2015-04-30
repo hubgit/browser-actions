@@ -84,6 +84,18 @@
   }
 })();</code></pre>
 </li>
+<li>
+<p><a>View in Sci-Hub</a> &middot; View the current article (requires a DOI) via <a href="http://sci-hub.org/">Sci-Hub</a></p>
+<pre><code>(function() {
+  var node = document.querySelector('meta[name=citation_doi]');
+  if (!node) return;
+
+  var doi = node.getAttribute('content').trim().replace(/^doi:/, '');
+  if (!doi) return;
+
+  location.href = 'http://dx.doi.org.sci-hub.org/' + encodeURIComponent(doi);
+})();</code></pre>
+</li>
 </ul>
 
 <script src="actions.js"></script>
