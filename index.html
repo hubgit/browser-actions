@@ -85,15 +85,16 @@
 })();</code></pre>
 </li>
 <li>
-<p><a>View in Sci-Hub</a> &middot; View the current article (requires a DOI) via <a href="http://sci-hub.org/">Sci-Hub</a></p>
+<p><a>View in Sci-Hub</a> &middot; View the current article via <a href="http://sci-hub.org/">Sci-Hub</a></p>
 <pre><code>(function() {
   var node = document.querySelector('meta[name=citation_doi]');
-  if (!node) return;
-
-  var doi = node.getAttribute('content').trim().replace(/^doi:/, '');
-  if (!doi) return;
-
-  location.href = 'http://dx.doi.org.sci-hub.org/' + encodeURIComponent(doi);
+  if (node) {
+    var doi = node.getAttribute('content').trim().replace(/^doi:/, '');
+    if (doi) {
+      location.href = 'http://dx.doi.org.sci-hub.org/' + encodeURIComponent(doi);
+    }
+  }
+  location.hostname += '.sci-hub.org';
 })();</code></pre>
 </li>
 </ul>
