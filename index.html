@@ -97,6 +97,10 @@
   location.hostname += '.sci-hub.org';
 })();</code></pre>
 </li>
+<li>
+  <p><a>Download CRX</a> &middot; Download an extension as a CRX file from the Chrome Web Store</p>
+  <pre><code>location.href = 'http://clients2.google.com/service/update2/crx?response=redirect&prodversion=42&x=' + encodeURIComponent('uc&id=' + location.pathname.split('/').pop());</code></pre>
+</li>
 </ul>
 
 <script src="actions.js"></script>
