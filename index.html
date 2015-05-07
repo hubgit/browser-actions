@@ -101,6 +101,15 @@
   <p><a>Download CRX</a> &middot; Download an extension as a CRX file from the Chrome Web Store</p>
   <pre><code>location.href = 'http://clients2.google.com/service/update2/crx?response=redirect&prodversion=42&x=' + encodeURIComponent('uc&id=' + location.pathname.split('/').pop());</code></pre>
 </li>
+
+<li>
+  <p><a>Clear cookies</a> &middot; Delete all cookies set for the current page</p>
+  <pre><code>document.cookie.split(/;/).map(function(cookie) { 
+    return cookie.trim().substring(0, cookie.indexOf('=') - 1); 
+}).forEach(function(name) {
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+});</code></pre>
+</li>
 </ul>
 
 <script src="actions.js"></script>
