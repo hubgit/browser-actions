@@ -107,7 +107,18 @@
   <pre><code>document.cookie.split(/;/).map(function(cookie) { 
     return cookie.trim().substring(0, cookie.indexOf('=') - 1); 
 }).forEach(function(name) {
-    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+  [document.location.hostname, document.location.hostname.split('.').slice(-2).join('.')].forEach(function(domain) {
+    ['/', '.'].forEach(function(path) {
+      document.cookie = [
+        ['name', name],
+        ['domain', domain],
+        ['path', path],
+        ['expires', 'Thu, 01 Jan 1970 00:00:00 UTC']
+      ].map(function(parts) {
+        return parts.join('=');
+      }).join(';');
+    });
+  });
 });</code></pre>
 </li>
 </ul>
