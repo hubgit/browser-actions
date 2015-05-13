@@ -42,8 +42,12 @@
 
 <ul>
 <li>
-<p><a>Find page in Google</a> &middot; Search Google for the current page</p>
-<pre><code>location.href = 'http://www.google.com/search?&q=' + encodeURIComponent(location.href)</code></pre>
+<p><a>Find page URL in Google</a> &middot; Search Google for the current page URL</p>
+<pre><code>location.href = 'http://www.google.com/search?q=' + encodeURIComponent(location.href)</code></pre>
+</li>
+<li>
+<p><a>Find page title in Google</a> &middot; Search Google for the current page title</p>
+<pre><code>location.href = 'http://www.google.com/search?q=' + encodeURIComponent(document.title)</code></pre>
 </li>
 <li>
 <p><a>View in Altmetric</a> &middot; View metrics for the current article (requires a DOI) at <a href="https://altmetric.com/">Altmetric</a></p>
