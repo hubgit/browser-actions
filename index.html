@@ -99,11 +99,11 @@
   if (node) {
     var doi = node.getAttribute('content').trim().replace(/^doi:/, '');
     if (doi) {
-      location.href = 'http://dx.doi.org.sci-hub.org/' + encodeURIComponent(doi);
+      location.href = 'http://dx.doi.org.sci-hub.io/' + encodeURIComponent(doi);
       return false;
     }
   }
-  location.hostname += '.sci-hub.org';
+  location.hostname += '.sci-hub.io';
 })();</code></pre>
 </li>
 <li>
