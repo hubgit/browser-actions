@@ -20,8 +20,12 @@
 <pre><code>location.href = location.href.replace(/web\/\d+/, 'save', location.href)</code></pre>
 </li>
 <li>
-<p><a>View Archive</a> &middot; View the earliest snapshot of the current page in the Internet Archive's Wayback Machine</p>
+<p><a>View First Archive</a> &middot; View the earliest snapshot of the current page in the Internet Archive's Wayback Machine</p>
 <pre><code>location.href = 'https://web.archive.org/web/1/' + location.href</code></pre>
+</li>
+<li>
+<p><a>View Latest Archive</a> &middot; View the latest snapshot of the current page in the Internet Archive's Wayback Machine</p>
+<pre><code>location.href = 'https://web.archive.org/' + location.href</code></pre>
 </li>
 </ul>
 
