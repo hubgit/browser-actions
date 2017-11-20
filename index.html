@@ -103,7 +103,7 @@
   if (node) {
     var doi = node.getAttribute('content').trim().replace(/^doi:/, '');
     if (doi) {
-      location.href = 'https://sci-hub.cc/http://doi.org/' + encodeURIComponent(doi);
+      location.href = 'https://sci-hub.cc/https://doi.org/' + encodeURIComponent(doi);
       return false;
     }
   }
