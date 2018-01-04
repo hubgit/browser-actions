@@ -97,17 +97,17 @@
 })();</code></pre>
 </li>
 <li>
-<p><a>View in Sci-Hub</a> &middot; View the current article via <a href="http://sci-hub.org/">Sci-Hub</a></p>
+<p><a>View in Sci-Hub</a> &middot; View the current article via <a href="https://sci-hub.wang/">Sci-Hub</a></p>
 <pre><code>(function() {
   var node = document.querySelector('meta[name=citation_doi]');
   if (node) {
     var doi = node.getAttribute('content').trim().replace(/^doi:/, '');
     if (doi) {
-      location.href = 'https://sci-hub.bz/https://doi.org/' + encodeURIComponent(doi);
+      location.href = 'https://sci-hub.wang/https://doi.org/' + encodeURIComponent(doi);
       return false;
     }
   }
-  location = 'https://sci-hub.bz/' + location;
+  location = 'https://sci-hub.wang/' + location;
 })();</code></pre>
 </li>
 <li>
